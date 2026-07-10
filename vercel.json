@@ -6,10 +6,6 @@
       "framework": "vite",
       "buildCommand": "pnpm build",
       "outputDirectory": "dist"
-    },
-    "backend": {
-      "root": "backend",
-      "framework": "fastapi"
     }
   }
 }
