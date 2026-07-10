@@ -9,8 +9,7 @@
     },
     "backend": {
       "root": "backend",
-      "framework": "fastapi",
-      "api": true
+      "framework": "fastapi"
     }
   }
 }
