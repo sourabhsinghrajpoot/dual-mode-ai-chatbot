@@ -1,0 +1,9 @@
+{
+  "info": {"name": "Dual Mode AI Chatbot", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"},
+  "item": [
+    {"name": "Health", "request": {"method": "GET", "url": "http://localhost:8000/health"}},
+    {"name": "Support Chat", "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "url": "http://localhost:8000/chat", "body": {"mode": "raw", "raw": "{\"session_id\":\"abc123\",\"message\":\"Where is my order ORD-1001?\"}"}}},
+    {"name": "Assistant Chat", "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "url": "http://localhost:8000/chat", "body": {"mode": "raw", "raw": "{\"session_id\":\"abc123\",\"message\":\"Remind me tomorrow at 9 AM to call John.\"}"}}},
+    {"name": "Reset Session", "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "url": "http://localhost:8000/reset-session", "body": {"mode": "raw", "raw": "{\"session_id\":\"abc123\"}"}}}
+  ]
+}

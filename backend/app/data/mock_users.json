@@ -1,0 +1,5 @@
+[
+  {"email": "maya@example.com", "name": "Maya Rao", "plan": "Pro", "account_status": "Active"},
+  {"email": "alex@example.com", "name": "Alex Chen", "plan": "Starter", "account_status": "Active"},
+  {"email": "sam@example.com", "name": "Sam Rivera", "plan": "Business", "account_status": "Payment review"}
+]

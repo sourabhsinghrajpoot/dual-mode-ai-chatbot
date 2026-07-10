@@ -1,0 +1,5 @@
+[
+  {"order_id": "ORD-1001", "email": "maya@example.com", "status": "Shipped", "carrier": "DHL", "eta": "2026-07-13", "items": ["Noise-canceling headphones"]},
+  {"order_id": "ORD-1002", "email": "alex@example.com", "status": "Processing", "carrier": null, "eta": "2026-07-15", "items": ["Smart desk lamp"]},
+  {"order_id": "ORD-2048", "email": "sam@example.com", "status": "Delayed", "carrier": "FedEx", "eta": "2026-07-16", "items": ["Ergonomic keyboard"]}
+]
