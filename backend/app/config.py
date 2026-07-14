@@ -15,7 +15,9 @@ class Settings(BaseSettings):
         default_factory=lambda: [
             "http://localhost:5173",
             "http://localhost:80",
-            "https://*.vercel.app",  # Allow all Vercel deployments
+            "http://localhost",
+            "https://*.vercel.app",
+            "https://localhost:3000",
         ]
     )
     database_url: str = f"sqlite+aiosqlite:///{BASE_DIR / 'chatbot.db'}"
