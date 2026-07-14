@@ -1,3 +1,5 @@
+const API_BASE = import.meta.env.VITE_API_URL || "/api";
+
 export type Mode = "support" | "assistant";
 
 export type ChatPayload = {
@@ -17,13 +19,13 @@ export type ChatResult = {
 };
 
 export async function sendChat(payload: ChatPayload): Promise<ChatResult> {
-  const response = await fetch("/api/chat", {
+  const response = await fetch(`${API_BASE}/chat`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload)
   });
   if (!response.ok) {
-    throw new Error(`Chat request failed: ${response.status}`);
+    throw new Error(`Chat request failed: ${response.status} ${response.statusText}`);
   }
   return response.json();
 }
@@ -33,13 +35,13 @@ export async function streamChat(
   onMeta: (meta: Partial<ChatResult>) => void,
   onToken: (token: string) => void
 ): Promise<ChatResult | null> {
-  const response = await fetch("/api/chat", {
+  const response = await fetch(`${API_BASE}/chat`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ ...payload, stream: true })
   });
   if (!response.ok || !response.body) {
-    throw new Error(`Streaming request failed: ${response.status}`);
+    throw new Error(`Streaming request failed: ${response.status} ${response.statusText}`);
   }
 
   const reader = response.body.getReader();

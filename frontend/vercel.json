@@ -1,0 +1,13 @@
+{
+  "buildCommand": "pnpm install && pnpm build",
+  "outputDirectory": "dist",
+  "env": {
+    "VITE_API_URL": "@vite-api-url"
+  },
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "${{ secrets.BACKEND_API_URL }}/api/:path*"
+    }
+  ]
+}

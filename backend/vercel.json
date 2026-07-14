@@ -1,0 +1,15 @@
+{
+  "buildCommand": "pip install -r requirements.txt",
+  "outputDirectory": ".",
+  "runtime": "python3.11",
+  "functions": {
+    "app/main.py": {
+      "runtime": "python3.11"
+    }
+  },
+  "env": {
+    "ANTHROPIC_API_KEY": "@anthropic-api-key",
+    "DATABASE_URL": "@database-url",
+    "ENVIRONMENT": "production"
+  }
+}
